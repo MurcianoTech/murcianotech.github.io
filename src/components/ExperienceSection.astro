@@ -1,0 +1,116 @@
+---
+import { experienceData, personalInfo } from '../data/portfolio.js';
+---
+
+<section id="experience" class="experience-section">
+    <div class="container">
+        <h2>Mi Experiencia Laboral</h2>
+        <div class="experience-list">
+            {experienceData.map(item => (
+                <div class="experience-item">
+                    <h3>{item.title}</h3>
+                    <p class="company-period">{item.company} <span class="period-separator">—</span> {item.period}</p>
+                    <div class="experience-description">
+                        {item.description.map(desc => <p>{desc}</p>)}
+                    </div>
+                </div>
+            ))}
+        </div>
+        <p class="linkedin-cta">Para un perfil más detallado y completo, visita mi <a href={personalInfo.linkedinUrl} target="_blank" rel="noopener noreferrer">LinkedIn <i class="fab fa-linkedin"></i></a></p>
+    </div>
+</section>
+
+<style>
+    .experience-section {
+        padding: 60px 0;
+        margin-bottom: 40px;
+        background-color: var(--card-bg);
+        box-shadow: 0 6px 20px var(--shadow-color);
+        border-radius: 12px;
+    }
+
+    .experience-section h2 {
+        text-align: center;
+        font-size: 3em;
+        margin-bottom: 50px;
+        color: var(--primary-color);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .experience-list {
+        display: grid;
+        gap: 30px;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .experience-item {
+        background-color: var(--bg-light);
+        border: 1px solid var(--border-color);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .experience-item:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    }
+
+    .experience-item h3 {
+        font-size: 1.9em;
+        margin-bottom: 8px;
+        color: var(--secondary-color);
+    }
+
+    .experience-item .company-period {
+        font-size: 1.05em;
+        color: var(--text-light);
+        margin-bottom: 20px;
+        font-weight: 500;
+        display: block;
+    }
+    .experience-item .period-separator {
+        color: var(--primary-color);
+        font-weight: bold;
+    }
+
+    .experience-description p {
+        font-size: 1.05em;
+        color: var(--text-light);
+        margin-bottom: 0.5em;
+        text-align: justify;
+    }
+    .experience-description p:last-child {
+        margin-bottom: 0;
+    }
+
+    .linkedin-cta {
+        text-align: center;
+        margin-top: 40px;
+        font-size: 1.15em;
+        font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+        .experience-section {
+            padding: 40px 15px;
+            margin-bottom: 30px;
+        }
+
+        .experience-section h2 {
+            font-size: 2.2em;
+            margin-bottom: 30px;
+        }
+
+        .experience-item {
+            padding: 20px;
+        }
+
+        .experience-item h3 {
+            font-size: 1.6em;
+        }
+    }
+</style>

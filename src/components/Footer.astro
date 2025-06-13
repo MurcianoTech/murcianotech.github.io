@@ -1,0 +1,41 @@
+---
+import { personalInfo } from '../data/portfolio.js';
+---
+
+<footer class="main-footer">
+    <div class="container">
+        <p>© {new Date().getFullYear()} {personalInfo.name}. Todos los derechos reservados.</p>
+        <p>Diseñado y desarrollado con <i class="fas fa-heart"></i> y Astro.</p>
+    </div>
+</footer>
+
+<style>
+    .main-footer {
+        background-color: var(--bg-dark);
+        color: white;
+        text-align: center;
+        padding: 30px 0;
+        font-size: 0.95em;
+        margin-top: 60px;
+        box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+        width: 100%;
+        flex-shrink: 0;
+    }
+    .main-footer .container {
+        max-width: 900px;
+    }
+    .main-footer p {
+        margin: 0.5em 0;
+    }
+    .main-footer i {
+        color: #e74c3c;
+        margin: 0 5px;
+    }
+
+    @media (max-width: 768px) {
+        .main-footer {
+            margin-top: 40px;
+            padding: 20px 15px;
+        }
+    }
+</style>
