@@ -1,6 +1,7 @@
 import ScrollReveal from 'scrollreveal';
 
 document.addEventListener('DOMContentLoaded', () => {
+    // --- Lógica de ScrollReveal ---
     ScrollReveal({
         distance: '60px',
         duration: 1000,
@@ -29,52 +30,20 @@ document.addEventListener('DOMContentLoaded', () => {
     ScrollReveal().reveal('.contact-section .contact-intro', { origin: 'bottom', distance: '20px', delay: 300 });
     ScrollReveal().reveal('.contact-info p', { interval: 100, delay: 400 });
 
+    // --- Lógica del Sidebar y Navegación ---
     const sidebar = document.querySelector('.sidebar');
     const menuToggle = document.querySelector('.menu-toggle');
     const mainContent = document.querySelector('main');
     const menuLinks = document.querySelectorAll('.side-menu .menu-link');
     const sections = document.querySelectorAll('main section[id]');
-    const themeToggle = document.getElementById('theme-toggle');
+    // No necesitamos themeToggle aquí, theme-toggle.js ya lo maneja
 
-    const toggleDarkMode = () => {
-        document.body.classList.toggle('dark-mode');
-        const isDarkMode = document.body.classList.contains('dark-mode');
-        localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-
-        const icon = themeToggle.querySelector('i');
-        if (icon) {
-            if (isDarkMode) {
-                icon.classList.remove('fa-moon');
-                icon.classList.add('fa-sun');
-            } else {
-                icon.classList.remove('fa-sun');
-                icon.classList.add('fa-moon');
-            }
-        }
-    };
-
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-        document.body.classList.add('dark-mode');
-    }
-
-    const initialIcon = themeToggle.querySelector('i');
-    if (initialIcon) {
-        if (document.body.classList.contains('dark-mode')) {
-            initialIcon.classList.remove('fa-moon');
-            initialIcon.classList.add('fa-sun');
-        } else {
-            initialIcon.classList.remove('fa-sun');
-            initialIcon.classList.add('fa-moon');
-        }
-    }
-
-    if (themeToggle) {
-        themeToggle.addEventListener('click', toggleDarkMode);
-    }
+    // La lógica de toggleDarkMode, savedTheme, initialIcon y el event listener para themeToggle
+    // SE ELIMINAN DE AQUÍ por completo, ya que `theme-toggle.js` se encarga de eso.
 
     if (menuToggle) {
         menuToggle.addEventListener('click', () => {
+            console.log('Botón de menú clicado!')
             if (sidebar) sidebar.classList.toggle('is-open');
             if (menuToggle) menuToggle.classList.toggle('is-active');
             if (mainContent) mainContent.classList.toggle('sidebar-open');
@@ -82,21 +51,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     menuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth <= 768) {
-                    if (sidebar) sidebar.classList.remove('is-open');
-                    if (menuToggle) menuToggle.classList.remove('is-active');
-                    if (mainContent) mainContent.classList.remove('sidebar-open');
-                }
-            });
+        link.addEventListener('click', () => {
+            // Cierra el sidebar solo en pantallas pequeñas al hacer clic en un enlace
+            if (window.innerWidth <= 768) {
+                if (sidebar) sidebar.classList.remove('is-open');
+                if (menuToggle) menuToggle.classList.remove('is-active');
+                if (mainContent) mainContent.classList.remove('sidebar-open');
+            }
         });
+    });
 
+    // Lógica para activar el enlace de navegación al hacer scroll
     const activateNavLink = () => {
         let currentActiveLink = null;
         let scrollY = window.scrollY || window.pageYOffset;
 
         sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100;
+            const sectionTop = section.offsetTop - 100; // Ajuste para el offset de la sección
             const sectionHeight = section.offsetHeight;
             const sectionId = section.getAttribute('id');
 
@@ -111,6 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (currentActiveLink) {
             currentActiveLink.classList.add('active');
         } else {
+            // Si no hay ninguna sección activa, activa el enlace a la sección 'hero' (si existe)
             const homeLink = document.querySelector('.side-menu a[href="#hero"]');
             if (homeLink) {
                 homeLink.classList.add('active');
@@ -119,5 +91,5 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.addEventListener('scroll', activateNavLink);
-    activateNavLink();
+    activateNavLink(); // Llama una vez al cargar para establecer el estado inicial
 });
