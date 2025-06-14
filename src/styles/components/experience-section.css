@@ -86,7 +86,7 @@
 .timeline-content {
     background-color: var(--bg-light); 
     border: 1px solid var(--border-color);
-    padding: 25px; 
+    padding: 35px; 
     border-radius: 10px;
     box-shadow: 0 4px 12px var(--shadow-color);
     position: relative; 
@@ -226,11 +226,11 @@
     }
 
     .timeline-content {
-        padding: 20px;
+        padding: 30px;
     }
 
     .timeline-content h3 {
-        font-size: 1.5em;
+        font-size: 1.6em;
     }
 
     .timeline-content .company-period {
@@ -239,7 +239,7 @@
     }
 
     .experience-description p {
-        font-size: 0.95em;
+        font-size: 1em;
         margin-bottom: 0.5em;
     }
 

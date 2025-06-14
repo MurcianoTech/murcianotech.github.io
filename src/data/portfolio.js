@@ -1,10 +1,12 @@
 export const personalInfo = {
     name: "Alejandro Valenzuela Villa",
     photoPath: "/assets/profile-image.jpeg",
-    tagline: "Ingeniero de Software | Arquitecto de Soluciones",
+    tagline: "Ingeniero de Software | Arquitecto Backend | YouTuber",  
+    welcomeMessage: '!Bienvenido a mi portfolio! Espero que encuentres aquí información interesante sobre mi trayectoria profesional y mis proyectos.',
     bio: `¡Hola! Soy Alejandro Valenzuela Villa, soy Ingeniero de software por la Universidad de Murcia y con un curso de especialista en desarrollos de aplicaciones móviles.
     Me considero un apasionado de la tecnología y del desarrollo de software con más de diez años de experiencia en el sector.
-    Actualmente, me dedico tanto a desarrollar como a ser arquitecto de software backend.`,
+    Actualmente, me dedico  a la arquitectura de software y al desarrollo backend, trabajando principalmente con PHP y Java.
+    Aunque aprendiendo Python para ampliar mis horizontes.`,
     email: "murcianotech@gmail.com",
     linkedinUrl: "https://www.linkedin.com/in/alejandro-valenzuela-villa-47322570/",
     githubUrl: "https://github.com/MurcianoTech",
@@ -29,29 +31,44 @@ export const navigationLinks = [
 
 export const youtubeVideos = [
     {
-        title: 'Aprender PHP | Configurar VSCode | Parte 2 | MurcianoTech',
-        url: 'http://www.youtube.com/watch?v=MNOnl7vzX-M',
-        thumbnail: 'https://img.youtube.com/vi/MNOnl7vzX-M/mqdefault.jpg' // Reemplaza con la miniatura real del vídeo
+        title: 'Bases vs Lenguaje: ¿Cómo Deberías Empezar? 🤔',
+        url: 'http://www.youtube.com/watch?v=G83Y3S7ufok',
+        thumbnail: 'https://img.youtube.com/vi/G83Y3S7ufok/mqdefault.jpg'
     },
     {
-        title: 'Como vamos a aprender PHP? | Parte 1 | MurcianoTech',
-        url: 'http://www.youtube.com/watch?v=fAQmDFjSLvw',
-        thumbnail: 'https://img.youtube.com/vi/fAQmDFjSLvw/mqdefault.jpg' // Reemplaza
+        title: 'COBOL: El Lenguaje que Sostiene al Mundo y la Escasez de Desarrolladores',
+        url: 'http://www.youtube.com/watch?v=UxRR6Ih2dbw',
+        thumbnail: 'https://img.youtube.com/vi/UxRR6Ih2dbw/mqdefault.jpg'
     },
     {
-        title: 'Arrays!!!! | CURSO de PHP completo desde CERO 2024 | Parte 7 | MurcianoTech',
-        url: 'http://www.youtube.com/watch?v=FYfLvktKzbA',
-        thumbnail: 'https://img.youtube.com/vi/FYfLvktKzbA/mqdefault.jpg' // Reemplaza
+        title: '🚨 ¿Por qué todo el mundo ODIA a PHP? (¿Realmente es tan malo?)',
+        url: 'http://www.youtube.com/watch?v=khmfuLdD3-0',
+        thumbnail: 'https://img.youtube.com/vi/khmfuLdD3-0/mqdefault.jpg'
     },
     {
-        title: 'CURSO de PHP completo desde CERO 2024 | Parte 8 | MurcianoTech',
-        url: 'http://www.youtube.com/watch?v=ADkjSwIEgfM',
-        thumbnail: 'https://img.youtube.com/vi/ADkjSwIEgfM/mqdefault.jpg' // Reemplaza
+        title: 'Cómo Conseguir Tu Primer Trabajo como Junior: 3 Tips Infalibles 🚀',
+        url: 'http://www.youtube.com/watch?v=G3jf1ow1I2s',
+        thumbnail: 'https://img.youtube.com/vi/G3jf1ow1I2s/mqdefault.jpg'
     },
     {
-        title: 'CURSO de PHP completo desde CERO 2024 | Parte 6 | MurcianoTech',
-        url: 'http://www.youtube.com/watch?v=YNytAbsyPpE',
-        thumbnail: 'https://img.youtube.com/vi/YNytAbsyPpE/mqdefault.jpg' // Reemplaza
+        title: 'Puntos IMPORTANTES para trabajar en el Mundo IT y superar procesos de selección',
+        url: 'http://www.youtube.com/watch?v=3IuVhLHIMmc',
+        thumbnail: 'https://img.youtube.com/vi/3IuVhLHIMmc/mqdefault.jpg'
+    },
+    {
+        title: 'Qué es acoplamiento y cohesión? | Principios SOLID',
+        url: 'http://www.youtube.com/watch?v=6EWbbZZPdms',
+        thumbnail: 'https://img.youtube.com/vi/6EWbbZZPdms/mqdefault.jpg'
+    },
+    {
+        title: 'Notas de Corte Ingeniería Informática 2025: ¿Qué Está Pasando?',
+        url: 'http://www.youtube.com/watch?v=WAcBgyiz_ig',
+        thumbnail: 'https://img.youtube.com/vi/WAcBgyiz_ig/mqdefault.jpg'
+    },
+    {
+        title: 'Lenguaje Ensamblador: La Historia del Lenguaje que Controla la Máquina 🖥️',
+        url: 'http://www.youtube.com/watch?v=9ULH0-eARqw',
+        thumbnail: 'https://img.youtube.com/vi/9ULH0-eARqw/mqdefault.jpg'
     }
 ];
 
@@ -62,17 +79,15 @@ export const experienceData = [
         period: "Octubre 2021 - Actualidad",
         description: [
             `Trabajo realizado a distancia.`,
-            `Desarrollo PHP (5.6, 7.x, 8), JavaScript (Vanilla, JQuery, Angular 10, Redux, Typescript con NgRx).`,
-            `Bases de datos relacionales (MySql, Oracle, SQLite) y no relacionales (MongoDB).`,
             `Desarrollo de pruebas unitarias y de aceptación (PHPUnit, Behat).`,
             `Logs con Graylog y Kibana. Docker. Metodología SCRUM.`,
             `Desarrollo de proyectos utilizando DDD (Domain Driven Design) y TDD con arquitectura hexagonal y principios SOLID.`,
             `Uso de ElasticSearch y Dynatrace.`,
             `Referencia técnica en los diferentes proyectos.`,
-            `Proyectos: JRunWay (referente Backend, PHP 7+, Kibana, ElasticSearch, MySql), FaCe (referente Backend), PtPlata (referente Backend), Forma (creación de formularios).`,
+            `Proyectos: JRunWay, FaCe, PtPlata, Forma.`,
             `Formación impartida: Diseño Orientado al Dominio (DDD), Conducción por el Comportamiento.`
         ],
-        skillsUsed: ['React', 'Node.js', 'JavaScript', 'MySQL', 'Git', 'HTML5', 'CSS3']
+        skillsUsed: ['PHP', 'MySQL', 'Git', 'Angular', 'Java', 'HTML5', 'CSS3', 'TDD', 'DDD', 'C#', 'Clean Code','DDD', 'MongoDB', 'Oracle']
     },
     {
         title: "Software Engineer",
@@ -80,8 +95,6 @@ export const experienceData = [
         period: "Septiembre 2018 - Septiembre 2021",
         description: [
             `Trabajo realizado a distancia.`,
-            `Desarrollo web (PHP, JavaScript, JQuery, Angular, Java) y móvil (Android).`,
-            `Bases de datos relacionales (MySQL) y NoSQL (MongoDb, Postgres).`,
             `Desarrollo .NET. Pruebas unitarias (PHPUnit, JUnit) y de aceptación (Behat).`,
             `Principios SOLID, uso de Docker, arquitectura hexagonal.`,
             `Implementación de microservicios.`,
@@ -89,7 +102,7 @@ export const experienceData = [
             `Proyectos con DDD (Domain Driven Design), Event Sourcing y CQRS.`,
             `SCRUM.`
         ],
-        skillsUsed: ['React', 'Node.js', 'JavaScript', 'MySQL', 'Git', 'HTML5', 'CSS3']
+        skillsUsed: ['PHP', 'MySQL', 'Git', 'Angular', 'Java', 'HTML5', 'CSS3', 'TDD', 'DDD', 'C#', 'Clean Code','DDD', 'MongoDB', 'Android Java']
     },
     {
         title: "Android & Web Developer",
@@ -101,7 +114,7 @@ export const experienceData = [
             `Metodología ágil SCRUM.`,
             `Desarrollo de automatización de procesos.`
         ],
-        skillsUsed: ['React', 'Node.js', 'JavaScript', 'MySQL', 'Git', 'HTML5', 'CSS3']
+        skillsUsed: ['PHP', 'MySQL', 'Git', 'Angular', 'Java', 'HTML5', 'CSS3', 'JavaScript']
     },
     {
         title: "Android & Web Developer",
@@ -112,23 +125,29 @@ export const experienceData = [
             `Desarrollo de aplicaciones móviles Android.`,
             `Desarrollo de aplicaciones híbridas utilizando Cordova, Ionic con JavaScript.`,
             `Servidores Apache.`,
-            `Bases de datos MySQL, SQLite.`
         ],
-        skillsUsed: ['React', 'Node.js', 'JavaScript', 'MySQL', 'Git', 'HTML5', 'CSS3']
+        skillsUsed: ['PHP', 'MySQL', 'Git', 'Angular', 'Java', 'HTML5', 'CSS3', 'JavaScript']
     },
 ];
 
 export const skills = [
+    { name: 'PHP', icon: 'fab fa-php', percentage: 100, color: '#777BB4' },
+    { name: 'MySQL', icon: 'fas fa-database', percentage: 90, color: '#4479A1' },
+    { name: 'Git', icon: 'fab fa-git-alt', percentage: 90, color: '#F05032' },
+    { name: 'TDD', icon: 'fas fa-vial', percentage: 85, color: '#4CAF50' }, // Icono de vial para testing, color verde
+    { name: 'DDD', icon: 'fas fa-cube', percentage: 85, color: '#8E24AA' }, // Icono de cubo para Domain-Driven Design, color púrpura
+    { name: 'Principios SOLID', icon: 'fas fa-hands-helping', percentage: 90, color: '#FFC107' }, // Icono de manos para colaboración/principios, color ámbar
+    { name: 'Clean Code', icon: 'fas fa-broom', percentage: 90, color: '#2196F3' }, // Icono de escoba para Clean Code, color azul claro
+    { name: 'JavaScript', icon: 'fab fa-js-square', percentage: 75, color: '#F7DF1E' },
+    { name: 'Python', icon: 'fab fa-python', percentage: 75, color: '#3776AB' }, // Icono de Python, color de Python
+    { name: 'Angular', icon: 'fab fa-angular', percentage: 70, color: '#DD0031' }, // Icono de Angular, color de Angular
+    { name: 'C#', icon: 'fas fa-hashtag', percentage: 60, color: '#922090' }, // Icono de #, color de C#
+    { name: 'Java', icon: 'fab fa-java', percentage: 80, color: '#007396' }, // Icono de Java, color de Java
+    { name: 'MongoDB', icon: 'fas fa-leaf', percentage: 70, color: '#47A248' }, // Icono de hoja para MongoDB, color de MongoDB
+    { name: 'Oracle', icon: 'fas fa-database', percentage: 80, color: '#F80000' }, // Icono de base de datos, color de Oracle
+    { name: 'Android Java', icon: 'fab fa-android', percentage: 80, color: '#3DDC84' }, // Icono de Android, color de Android
     { name: 'HTML5', icon: 'fab fa-html5', percentage: 95, color: '#E34F26' },
-    { name: 'CSS3', icon: 'fab fa-css3-alt', percentage: 90, color: '#1572B6' },
-    { name: 'JavaScript', icon: 'fab fa-js-square', percentage: 85, color: '#F7DF1E' },
-    { name: 'React', icon: 'fab fa-react', percentage: 80, color: '#61DAFB' },
-    { name: 'Node.js', icon: 'fab fa-node-js', percentage: 75, color: '#339933' },
-    { name: 'PHP', icon: 'fab fa-php', percentage: 70, color: '#777BB4' },
-    { name: 'MySQL', icon: 'fas fa-database', percentage: 65, color: '#4479A1' },
-    { name: 'Git', icon: 'fab fa-git-alt', percentage: 88, color: '#F05032' },
-    { name: 'Astro', img: '/assets/logos/astro.svg', percentage: 70, color: '#FF5D01' }, // Ejemplo con imagen local
-    // Añade más habilidades aquí
+    { name: 'CSS3', icon: 'fab fa-css3-alt', percentage: 70, color: '#1572B6' }
 ];
 
 export const aboutMeContent = `Mi nombre es ${personalInfo.name}. Como Ingeniero de Software, he dedicado más de una década a transformar ideas en soluciones tecnológicas robustas. Mi trayectoria abarca desde el desarrollo web y móvil hasta la arquitectura de sistemas complejos, siempre con un enfoque en la calidad del código y la eficiencia.
@@ -140,6 +159,5 @@ Mi pasión por la tecnología me impulsa a explorar nuevas herramientas y enfoqu
 export const contactInfo = {
     intro: "Estoy siempre abierto a nuevas oportunidades de desarrollo, colaboraciones técnicas o simplemente para hablar de tecnología. ¡No dudes en escribirme!",
     email: personalInfo.email,
-    linkedin: personalInfo.linkedinUrl,
     github: personalInfo.githubUrl,
 };
