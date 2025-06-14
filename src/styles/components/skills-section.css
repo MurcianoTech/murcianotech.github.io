@@ -1,0 +1,192 @@
+/* src/styles/components/skills-section.css */
+
+.skills-section {
+    /* Clases generales 'section-card' se aplicarán desde BaseLayout.astro */
+    padding: 60px; /* Padding consistente con otras secciones */
+    background-color: var(--card-bg);
+    border-radius: 12px; /* Bordes más redondeados */
+    box-shadow: 0 8px 25px var(--shadow-color); /* Sombra más pronunciada */
+    margin-bottom: 40px; /* Espacio consistente */
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px; /* Más espacio bajo el encabezado */
+}
+
+.section-header h2 {
+    font-size: 3em; /* Tamaño consistente con otros títulos de sección */
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.section-header p {
+    font-size: 1.15em; /* Un poco más grande para mejor legibilidad */
+    color: var(--secondary-color); /* Usamos el color de texto principal */
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+    opacity: 0.95;
+}
+
+.skills-grid {
+    display: grid;
+    /* Ajustamos el minmax para permitir un mejor flujo */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px; /* Espacio consistente entre elementos */
+}
+
+.skill-item {
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: 10px; /* Bordes un poco más redondeados */
+    padding: 25px; /* Más padding interno */
+    display: flex;
+    flex-direction: column;
+    gap: 18px; /* Más espacio entre elementos internos */
+    align-items: flex-start;
+    box-shadow: 0 4px 15px var(--shadow-color); /* Sombra de la tarjeta */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-8px); /* Efecto de levantamiento más pronunciado */
+    box-shadow: 0 8px 25px var(--shadow-color); /* Sombra más grande al hover */
+}
+
+.skill-icon-name {
+    display: flex;
+    align-items: center;
+    gap: 18px; /* Más espacio entre icono y nombre */
+    width: 100%;
+}
+
+.skill-item i {
+    font-size: 2.8em; /* Iconos un poco más grandes */
+    width: 45px; /* Tamaño fijo para consistencia */
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0; /* Evita que el icono se encoja */
+}
+
+.skill-img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    flex-shrink: 0; /* Evita que el logo se encoja */
+}
+
+.skill-item h3 {
+    font-size: 1.4em; /* Nombre de la habilidad un poco más grande */
+    color: var(--secondary-color);
+    margin: 0;
+    font-weight: 600;
+}
+
+.skill-bar-container {
+    width: 100%;
+    background-color: var(--border-color); /* Color de la barra base */
+    border-radius: 8px; /* Bordes más redondeados para la barra */
+    height: 18px; /* Altura un poco mayor para la barra */
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-bar-fill {
+    height: 100%;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 8px; /* Más espacio para el porcentaje */
+    box-sizing: border-box;
+    transition: width 1.5s ease-out; /* Animación más suave */
+}
+
+.skill-percentage {
+    color: white;
+    font-size: 0.9em; /* Porcentaje un poco más grande */
+    font-weight: 700; /* Más negrita */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4); /* Sombra más pronunciada */
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .skills-section {
+        padding: 50px 30px;
+    }
+    .section-header h2 {
+        font-size: 2.8em;
+    }
+    .section-header p {
+        font-size: 1.1em;
+    }
+    .skills-grid {
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-section {
+        padding: 40px 20px;
+        margin-bottom: 30px;
+    }
+
+    .section-header h2 {
+        font-size: 2.5em;
+        margin-bottom: 25px;
+    }
+
+    .section-header p {
+        font-size: 1em;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr; /* Una columna en móvil */
+        gap: 20px;
+    }
+
+    .skill-item {
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .skill-item h3 {
+        font-size: 1.2em;
+    }
+
+    .skill-item i, .skill-img {
+        font-size: 2.5em; /* Reducir tamaño de icono/logo en móvil */
+        width: 35px;
+        height: 35px;
+    }
+    .skill-bar-container {
+        height: 15px;
+    }
+    .skill-percentage {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-section {
+        padding: 30px 15px;
+    }
+    .section-header h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+    .skill-item i, .skill-img {
+        font-size: 2em;
+        width: 30px;
+        height: 30px;
+    }
+    .skill-item h3 {
+        font-size: 1.1em;
+    }
+}

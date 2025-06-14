@@ -176,6 +176,40 @@ const { title, description } = Astro.props;
         letter-spacing: 0.05em;
     }
 
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    .section-card {
+        transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    ::-webkit-scrollbar {
+        width: 12px; /* Ancho de la barra de desplazamiento */
+        background-color: var(--bg-light); /* Color de fondo de la pista de la barra */
+        border-radius: 6px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: var(--primary-color); /* Color del "pulgar" de la barra */
+        border-radius: 6px;
+        border: 2px solid var(--bg-light); /* Borde para el contraste */
+    }
+
+    /* Scrollbar en modo oscuro */
+    body.dark-mode ::-webkit-scrollbar {
+        background-color: var(--bg-dark);
+    }
+
+    body.dark-mode ::-webkit-scrollbar-thumb {
+        background-color: var(--primary-color);
+        border-color: var(--bg-dark);
+    }
+
     /* RESPONSIVE DESIGN para el layout general */
     @media (max-width: 768px) {
         .layout-container {
@@ -197,3 +231,5 @@ const { title, description } = Astro.props;
         }
     }
 </style>
+
+<script type="module" src="/src/scripts/global.js"></script>

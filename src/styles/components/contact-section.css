@@ -1,0 +1,141 @@
+/* src/styles/components/contact-section.css */
+
+.contact-section {
+    /* Clases generales 'section-card' se aplicarán desde BaseLayout.astro,
+       pero aquí mantenemos la estructura general del padding y margen. */
+    padding: 60px; /* Consistente con otras secciones */
+    background-color: var(--card-bg);
+    border-radius: 12px; /* Bordes más redondeados */
+    box-shadow: 0 8px 25px var(--shadow-color); /* Sombra más pronunciada */
+    margin-bottom: 40px; /* Espacio consistente */
+}
+
+.contact-section .container {
+    max-width: 900px; /* Ajusta el ancho máximo del contenido */
+    margin: 0 auto;
+}
+
+.contact-section h2 {
+    text-align: center;
+    font-size: 3em; /* Tamaño consistente con otros títulos de sección */
+    margin-bottom: 50px;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+}
+
+.contact-section .contact-intro {
+    font-size: 1.15em; /* Ajuste a la consistencia */
+    max-width: 700px; /* Ancho máximo para el párrafo */
+    margin: 0 auto 40px auto;
+    color: var(--secondary-color); /* Color de texto principal */
+    line-height: 1.7;
+    text-align: center;
+    opacity: 0.95;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Más espacio entre los elementos de contacto */
+    font-size: 1.1em; /* Ajuste del tamaño de fuente */
+    max-width: 550px; /* Ancho ligeramente mayor */
+    margin: 0 auto;
+    background-color: var(--bg-light); /* Fondo para la tarjeta de info */
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 15px var(--shadow-color); /* Sombra de la tarjeta */
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinear a la izquierda en desktop */
+    gap: 15px;
+    margin-bottom: 0;
+    color: var(--secondary-color);
+}
+
+.contact-info i {
+    font-size: 1.8em; /* Iconos un poco más grandes */
+    color: var(--primary-color);
+    width: 30px; /* Ancho fijo para alinear los iconos */
+    text-align: center;
+}
+
+.contact-info a {
+    font-weight: 600;
+    color: var(--secondary-color); /* Color por defecto del enlace */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: var(--primary-color); /* Cambio de color al hover */
+    text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .contact-section {
+        padding: 50px 30px;
+    }
+    .contact-section h2 {
+        font-size: 2.8em;
+    }
+    .contact-section .contact-intro {
+        font-size: 1.1em;
+    }
+    .contact-info {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 40px 20px;
+        margin-bottom: 30px;
+    }
+
+    .contact-section h2 {
+        font-size: 2.5em;
+        margin-bottom: 30px;
+    }
+
+    .contact-section .contact-intro {
+        font-size: 1em;
+        margin-bottom: 30px;
+    }
+
+    .contact-info {
+        flex-direction: column; /* Volver a columna en móvil */
+        gap: 15px; /* Menos espacio entre ítems */
+        padding: 20px;
+    }
+
+    .contact-info p {
+        justify-content: center; /* Centrar elementos en móvil */
+        text-align: center;
+    }
+    .contact-info i {
+        font-size: 1.5em;
+        width: auto; /* Permite que el icono no tenga ancho fijo */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-section {
+        padding: 30px 15px;
+    }
+    .contact-section h2 {
+        font-size: 2em;
+        margin-bottom: 25px;
+    }
+    .contact-info p {
+        font-size: 1em;
+    }
+    .contact-info i {
+        font-size: 1.3em;
+    }
+}

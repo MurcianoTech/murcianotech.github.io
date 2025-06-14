@@ -8,21 +8,52 @@ export const personalInfo = {
     email: "murcianotech@gmail.com",
     linkedinUrl: "https://www.linkedin.com/in/alejandro-valenzuela-villa-47322570/",
     githubUrl: "https://github.com/MurcianoTech",
-    youtubeUrl: "https://www.youtube.com/channel/UCphxAiT1Cp230Nf9sPDKigA"
+    youtubeUrl: "https://www.youtube.com/channel/UCphxAiT1Cp230Nf9sPDKigA",
+    contactIntro: '¿Tienes un proyecto en mente, una pregunta o simplemente quieres saludar? ¡No dudes en contactarme!'
 };
 
 export const socialLinks = [
     { name: 'LinkedIn', url: personalInfo.linkedinUrl, iconClass: 'fab fa-linkedin' },
     { name: 'GitHub', url: personalInfo.githubUrl, iconClass: 'fab fa-github' },
     { name: 'YouTube', url: personalInfo.youtubeUrl, iconClass: 'fab fa-youtube' },
-    { name: 'Email', url: personalInfo.email, iconClass: 'fas fa-envelope' }
+    /*{ name: 'Email', url: personalInfo.email, iconClass: 'fas fa-envelope' }*/
 ];
 
 export const navigationLinks = [
     { name: 'Inicio', href: '#hero' },
     { name: 'Sobre Mí', href: '#about' },
     { name: 'Experiencia', href: '#experience' },
+    { name: 'YouTube', href: '#youtube-videos' },
+    { name: 'Habilidades', href: '#skills' },
     { name: 'Contacto', href: '#contact' }
+];
+
+export const youtubeVideos = [
+    {
+        title: 'Aprender PHP | Configurar VSCode | Parte 2 | MurcianoTech',
+        url: 'http://www.youtube.com/watch?v=MNOnl7vzX-M',
+        thumbnail: 'https://img.youtube.com/vi/MNOnl7vzX-M/mqdefault.jpg' // Reemplaza con la miniatura real del vídeo
+    },
+    {
+        title: 'Como vamos a aprender PHP? | Parte 1 | MurcianoTech',
+        url: 'http://www.youtube.com/watch?v=fAQmDFjSLvw',
+        thumbnail: 'https://img.youtube.com/vi/fAQmDFjSLvw/mqdefault.jpg' // Reemplaza
+    },
+    {
+        title: 'Arrays!!!! | CURSO de PHP completo desde CERO 2024 | Parte 7 | MurcianoTech',
+        url: 'http://www.youtube.com/watch?v=FYfLvktKzbA',
+        thumbnail: 'https://img.youtube.com/vi/FYfLvktKzbA/mqdefault.jpg' // Reemplaza
+    },
+    {
+        title: 'CURSO de PHP completo desde CERO 2024 | Parte 8 | MurcianoTech',
+        url: 'http://www.youtube.com/watch?v=ADkjSwIEgfM',
+        thumbnail: 'https://img.youtube.com/vi/ADkjSwIEgfM/mqdefault.jpg' // Reemplaza
+    },
+    {
+        title: 'CURSO de PHP completo desde CERO 2024 | Parte 6 | MurcianoTech',
+        url: 'http://www.youtube.com/watch?v=YNytAbsyPpE',
+        thumbnail: 'https://img.youtube.com/vi/YNytAbsyPpE/mqdefault.jpg' // Reemplaza
+    }
 ];
 
 export const experienceData = [
@@ -41,7 +72,8 @@ export const experienceData = [
             `Referencia técnica en los diferentes proyectos.`,
             `Proyectos: JRunWay (referente Backend, PHP 7+, Kibana, ElasticSearch, MySql), FaCe (referente Backend), PtPlata (referente Backend), Forma (creación de formularios).`,
             `Formación impartida: Diseño Orientado al Dominio (DDD), Conducción por el Comportamiento.`
-        ]
+        ],
+        skillsUsed: ['React', 'Node.js', 'JavaScript', 'MySQL', 'Git', 'HTML5', 'CSS3']
     },
     {
         title: "Software Engineer",
@@ -57,7 +89,8 @@ export const experienceData = [
             `Proyectos logísticos para almacenes (WMS).`,
             `Proyectos con DDD (Domain Driven Design), Event Sourcing y CQRS.`,
             `SCRUM.`
-        ]
+        ],
+        skillsUsed: ['React', 'Node.js', 'JavaScript', 'MySQL', 'Git', 'HTML5', 'CSS3']
     },
     {
         title: "Android & Web Developer",
@@ -68,7 +101,8 @@ export const experienceData = [
             `Desarrollo de aplicaciones Android nativas.`,
             `Metodología ágil SCRUM.`,
             `Desarrollo de automatización de procesos.`
-        ]
+        ],
+        skillsUsed: ['React', 'Node.js', 'JavaScript', 'MySQL', 'Git', 'HTML5', 'CSS3']
     },
     {
         title: "Android & Web Developer",
@@ -80,8 +114,22 @@ export const experienceData = [
             `Desarrollo de aplicaciones híbridas utilizando Cordova, Ionic con JavaScript.`,
             `Servidores Apache.`,
             `Bases de datos MySQL, SQLite.`
-        ]
+        ],
+        skillsUsed: ['React', 'Node.js', 'JavaScript', 'MySQL', 'Git', 'HTML5', 'CSS3']
     },
+];
+
+export const skills = [
+    { name: 'HTML5', icon: 'fab fa-html5', percentage: 95, color: '#E34F26' },
+    { name: 'CSS3', icon: 'fab fa-css3-alt', percentage: 90, color: '#1572B6' },
+    { name: 'JavaScript', icon: 'fab fa-js-square', percentage: 85, color: '#F7DF1E' },
+    { name: 'React', icon: 'fab fa-react', percentage: 80, color: '#61DAFB' },
+    { name: 'Node.js', icon: 'fab fa-node-js', percentage: 75, color: '#339933' },
+    { name: 'PHP', icon: 'fab fa-php', percentage: 70, color: '#777BB4' },
+    { name: 'MySQL', icon: 'fas fa-database', percentage: 65, color: '#4479A1' },
+    { name: 'Git', icon: 'fab fa-git-alt', percentage: 88, color: '#F05032' },
+    { name: 'Astro', img: '/assets/logos/astro.svg', percentage: 70, color: '#FF5D01' }, // Ejemplo con imagen local
+    // Añade más habilidades aquí
 ];
 
 export const aboutMeContent = `Mi nombre es ${personalInfo.name}. Como Ingeniero de Software, he dedicado más de una década a transformar ideas en soluciones tecnológicas robustas. Mi trayectoria abarca desde el desarrollo web y móvil hasta la arquitectura de sistemas complejos, siempre con un enfoque en la calidad del código y la eficiencia.

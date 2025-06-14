@@ -1,0 +1,30 @@
+---
+import { skills } from '../data/portfolio.js';
+import '../styles/components/skills-section.css'; // <-- Importa el CSS aquí
+---
+
+<section id="skills" class="skills-section section-card">
+    <div class="section-header">
+        <h2>Mis Habilidades</h2>
+        <p>Un vistazo a las tecnologías y herramientas que manejo en el mundo del desarrollo web.</p>
+    </div>
+
+    <div class="skills-grid">
+        {skills.map(skill => (
+            <div class="skill-item">
+                <div class="skill-icon-name">
+                    {skill.icon && <i class={skill.icon} style={`color: ${skill.color};`}></i>}
+                    {skill.img && <img src={skill.img} alt={`${skill.name} Logo`} class="skill-img" />}
+                    <h3>{skill.name}</h3>
+                </div>
+                <div class="skill-bar-container">
+                    <div class="skill-bar-fill" style={`width: ${skill.percentage}%; background-color: ${skill.color};`}>
+                        <span class="skill-percentage">{skill.percentage}%</span>
+                    </div>
+                </div>
+            </div>
+        ))}
+    </div>
+</section>
+
+{/* ¡Ya no hay bloque <style> aquí! */}

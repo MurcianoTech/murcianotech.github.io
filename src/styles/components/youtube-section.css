@@ -1,0 +1,208 @@
+/* src/styles/components/youtube-section.css */
+
+.youtube-section {
+    /* Clases generales 'section-card' se aplicarán desde BaseLayout.astro */
+    padding: 60px; /* Aumentamos el padding para consistencia con otras secciones */
+    background-color: var(--card-bg);
+    border-radius: 12px; /* Bordes más redondeados para consistencia */
+    box-shadow: 0 8px 25px var(--shadow-color); /* Sombra más pronunciada */
+    margin-bottom: 40px; /* Espacio consistente */
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px; /* Más espacio bajo el encabezado */
+}
+
+.section-header h2 {
+    font-size: 3em; /* Tamaño consistente con otros títulos de sección */
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.section-header p {
+    font-size: 1.15em; /* Un poco más grande para mejor legibilidad */
+    color: var(--secondary-color); /* Usamos el color de texto principal */
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+    opacity: 0.95;
+}
+
+.video-grid {
+    display: grid;
+    /* Ajustamos el minmax para permitir más flexibilidad */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px; /* Más espacio entre vídeos */
+    margin-top: 40px;
+}
+
+.video-item {
+    background-color: var(--bg-light); /* Fondo de la tarjeta del vídeo */
+    border-radius: 10px; /* Bordes un poco más redondeados */
+    overflow: hidden;
+    box-shadow: 0 4px 15px var(--shadow-color); /* Sombra de la tarjeta del vídeo */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.video-item:hover {
+    transform: translateY(-8px); /* Efecto de levantamiento más pronunciado */
+    box-shadow: 0 8px 25px var(--shadow-color); /* Sombra más grande al hover */
+}
+
+.video-item a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* Relación de aspecto 16:9 */
+    background-color: black;
+}
+
+.video-thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.video-item a:hover .video-thumbnail {
+    transform: scale(1.08); /* Escala ligeramente más grande */
+}
+
+.video-play-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Overlay un poco más oscuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.video-item a:hover .video-play-overlay {
+    opacity: 1;
+}
+
+.video-play-overlay .fa-youtube {
+    font-size: 4.5em; /* Icono de YouTube un poco más grande */
+    color: #ff0000;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5); /* Sombra alrededor del icono */
+}
+
+.video-item h3 {
+    padding: 15px 20px; /* Más padding horizontal */
+    font-size: 1.3em; /* Título un poco más grande */
+    line-height: 1.5;
+    color: var(--secondary-color);
+    flex-grow: 1;
+    font-weight: 600;
+}
+
+.video-item h3 a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.video-item h3 a:hover {
+    color: var(--primary-color);
+}
+
+.channel-link {
+    text-align: center;
+    margin-top: 60px; /* Más espacio sobre el botón */
+}
+
+/* El botón ya debería usar los estilos de .button y .primary-button definidos globalmente */
+/* Solo ajustamos los propios de esta sección si es necesario */
+.channel-link .button {
+    font-size: 1.15em; /* Un poco más grande para el botón de canal */
+    padding: 14px 30px;
+}
+
+/* --- Media Queries --- */
+@media (max-width: 1024px) {
+    .youtube-section {
+        padding: 50px 30px;
+    }
+    .section-header h2 {
+        font-size: 2.8em;
+    }
+    .section-header p {
+        font-size: 1.1em;
+    }
+    .video-grid {
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .youtube-section {
+        padding: 40px 20px;
+        margin-bottom: 30px;
+    }
+
+    .section-header h2 {
+        font-size: 2.5em;
+        margin-bottom: 25px;
+    }
+
+    .section-header p {
+        font-size: 1em;
+    }
+
+    .video-grid {
+        grid-template-columns: 1fr; /* Una columna en móvil */
+        gap: 20px;
+    }
+
+    .video-item h3 {
+        font-size: 1.2em;
+        padding: 12px 15px;
+    }
+
+    .video-play-overlay .fa-youtube {
+        font-size: 3.5em;
+    }
+
+    .channel-link {
+        margin-top: 40px;
+    }
+
+    .channel-link .button {
+        font-size: 1.05em;
+        padding: 12px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .youtube-section {
+        padding: 30px 15px;
+    }
+    .section-header h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+    .video-play-overlay .fa-youtube {
+        font-size: 3em;
+    }
+    .video-item h3 {
+        font-size: 1.1em;
+    }
+}

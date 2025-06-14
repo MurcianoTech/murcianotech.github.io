@@ -1,87 +1,30 @@
 ---
-import { contactInfo, personalInfo } from '../data/portfolio.js';
+import { personalInfo } from '../data/portfolio.js'; // Solo importamos personalInfo
+import '../styles/components/contact-section.css'; // Importa el CSS aquí
 ---
 
-<section id="contact" class="contact-section">
+<section id="contact" class="contact-section section-card">
     <div class="container">
         <h2>Contáctame</h2>
-        <p class="contact-intro">{contactInfo.intro}</p>
+        <p class="contact-intro">{personalInfo.contactIntro}</p> {/* Usa personalInfo.contactIntro */}
         <div class="contact-info">
-            <p><i class="fas fa-envelope"></i> Email: <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a></p>
-            <p><i class="fab fa-linkedin"></i> LinkedIn: <a href={contactInfo.linkedin} target="_blank" rel="noopener noreferrer">{contactInfo.linkedin.replace('https://www.linkedin.com', '')}</a></p>
-            <p><i class="fab fa-github"></i> GitHub: <a href={contactInfo.github} target="_blank" rel="noopener noreferrer">{contactInfo.github.replace('https://github.com', '')}</a></p>
+            {personalInfo.email && (
+                <p><i class="fas fa-envelope"></i> Email: <a href={`mailto:${personalInfo.email}`}>{personalInfo.email}</a></p>
+            )}
+            {personalInfo.linkedinUrl && (
+                <p><i class="fab fa-linkedin"></i> LinkedIn: <a href={personalInfo.linkedinUrl} target="_blank" rel="noopener noreferrer">{personalInfo.linkedinUrl.replace('https://www.linkedin.com/', '')}</a></p>
+            )}
+            {personalInfo.githubUrl && (
+                <p><i class="fab fa-github"></i> GitHub: <a href={personalInfo.githubUrl} target="_blank" rel="noopener noreferrer">{personalInfo.githubUrl.replace('https://github.com/', '')}</a></p>
+            )}
+            <!--personalInfo.phone && (
+                <p><i class="fas fa-phone"></i> Teléfono: <a href={`tel:${personalInfo.phone}`}>{personalInfo.phone}</a></p>
+            )}
+            {personalInfo.twitterUrl && (
+                <p><i class="fab fa-twitter"></i> Twitter/X: <a href={personalInfo.twitterUrl} target="_blank" rel="noopener noreferrer">{personalInfo.twitterUrl.replace('https://twitter.com/', '')}</a></p>
+            )}-->
         </div>
     </div>
 </section>
 
-<style>
-    /* Estilos específicos de ContactSection */
-    .contact-section {
-        padding: 60px 0;
-        margin-bottom: 40px;
-        background-color: var(--card-bg);
-        box-shadow: 0 6px 20px var(--shadow-color);
-        border-radius: 12px;
-    }
-
-    .contact-section h2 {
-        text-align: center;
-        font-size: 3em;
-        margin-bottom: 50px;
-        color: var(--primary-color);
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-    }
-
-    .contact-section .contact-intro {
-        font-size: 1.25em;
-        max-width: 650px;
-        margin: 0 auto 40px auto;
-        color: var(--text-light);
-    }
-    .contact-info {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        font-size: 1.15em;
-        max-width: 500px;
-        margin: 0 auto;
-    }
-    .contact-info p {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 15px;
-        margin-bottom: 0;
-        color: var(--secondary-color);
-    }
-    .contact-info i {
-        font-size: 1.6em;
-        color: var(--primary-color);
-    }
-    .contact-info a {
-        font-weight: 600;
-    }
-
-    @media (max-width: 768px) {
-        .contact-section {
-            padding: 40px 15px;
-            margin-bottom: 30px;
-        }
-
-        .contact-section h2 {
-            font-size: 2.2em;
-            margin-bottom: 30px;
-        }
-
-        .contact-info p {
-            flex-direction: column;
-            gap: 5px;
-            text-align: center;
-        }
-        .contact-info i {
-            margin-bottom: 5px;
-            margin-right: 0;
-        }
-    }
-</style>
+{/* ¡Ya no hay bloque <style> aquí! */}

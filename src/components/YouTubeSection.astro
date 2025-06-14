@@ -1,0 +1,32 @@
+---
+import { youtubeVideos, personalInfo } from '../data/portfolio.js';
+import '../styles/components/youtube-section.css'; // <-- Importa el CSS aquí
+---
+
+<section id="youtube-videos" class="youtube-section section-card">
+    <div class="section-header">
+        <h2>Mi Canal de YouTube</h2>
+        <p>Aquí puedes encontrar algunos de mis vídeos más recientes y populares sobre desarrollo web y tecnología. ¡No olvides suscribirte!</p>
+    </div>
+
+    <div class="video-grid">
+        {youtubeVideos.map(video => (
+            <div class="video-item">
+                <a href={video.url} target="_blank" rel="noopener noreferrer">
+                    <img src={video.thumbnail} alt={`Miniatura del vídeo: ${video.title}`} class="video-thumbnail" loading="lazy" />
+                    <div class="video-play-overlay">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                </a>
+            </div>
+        ))}
+    </div>
+
+    <div class="channel-link">
+        <a href={personalInfo.youtubeUrl} target="_blank" rel="noopener noreferrer" class="button primary-button">
+            Ir al Canal de YouTube <i class="fas fa-external-link-alt"></i>
+        </a>
+    </div>
+</section>
+
+{/* ¡Ya no hay bloque <style> aquí! */}

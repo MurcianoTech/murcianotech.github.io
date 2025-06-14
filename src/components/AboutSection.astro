@@ -1,53 +1,18 @@
 ---
-import { aboutMeContent } from '../data/portfolio.js';
+import { personalInfo } from '../data/portfolio.js';
+import '../styles/components/about-section.css';
 ---
 
-<section id="about" class="about-section">
+<section id="about" class="about-section section-card">
     <div class="container">
         <h2>Sobre Mí</h2>
-        <p>{aboutMeContent}</p>
+        <div class="about-content-wrapper">
+            <div class="profile-image-container">
+                <img src={personalInfo.photoPath} alt={`Foto de perfil de ${personalInfo.name}`} class="profile-image" loading="lazy" />
+            </div>
+            <div class="about-text-content">
+                <p>{personalInfo.bio}</p>
+            </div>
+        </div>
     </div>
 </section>
-
-<style>
-    .about-section {
-        padding: 60px 0;
-        margin-bottom: 40px;
-        background-color: var(--card-bg);
-        box-shadow: 0 6px 20px var(--shadow-color);
-        border-radius: 12px;
-    }
-
-    .about-section h2 {
-        text-align: center;
-        font-size: 3em;
-        margin-bottom: 50px;
-        color: var(--primary-color);
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-    }
-
-    .about-section p {
-        font-size: 1.1em;
-        max-width: 800px;
-        margin: 0 auto 1.5em auto;
-        text-align: justify;
-        color: var(--text-light);
-    }
-
-    @media (max-width: 768px) {
-        .about-section {
-            padding: 40px 15px;
-            margin-bottom: 30px;
-        }
-
-        .about-section h2 {
-            font-size: 2.2em;
-            margin-bottom: 30px;
-        }
-
-        .about-section p {
-            font-size: 1em;
-        }
-    }
-</style>

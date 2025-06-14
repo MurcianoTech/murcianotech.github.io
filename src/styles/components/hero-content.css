@@ -1,0 +1,114 @@
+.hero-section {
+    background-color: var(--card-bg); 
+    padding: 100px 20px; 
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px var(--shadow-color);
+    margin-bottom: 40px;
+}
+
+.hero-content-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 40vh;
+}
+
+.bio-area {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.bio-area h1 {
+    font-size: 4.2em;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.bio-area h1 .highlight {
+    color: var(--primary-color);
+}
+
+.bio-area .tagline {
+    font-size: 1.8em;
+    font-weight: 500;
+    margin-bottom: 30px;
+    color: var(--text-light);
+    line-height: 1.4;
+    opacity: 0.9;
+}
+
+.bio-area .bio-text {
+    font-size: 1.15em;
+    margin-bottom: 50px;
+    text-align: center;
+    color: var(--secondary-color);
+    line-height: 1.7;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.9;
+}
+
+.button.primary-button {
+    padding: 15px 35px;
+    font-size: 1.1em;
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+@media (max-width: 1024px) {
+    .hero-section {
+        padding: 80px 15px;
+    }
+    .bio-area h1 {
+        font-size: 3.5em;
+    }
+    .bio-area .tagline {
+        font-size: 1.6em;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 15px;
+        margin-bottom: 25px;
+    }
+
+    .bio-area h1 {
+        font-size: 2.8em;
+    }
+
+    .bio-area .tagline {
+        font-size: 1.4em;
+        margin-bottom: 20px;
+    }
+
+    .bio-area .bio-text {
+        font-size: 1em;
+        margin-bottom: 30px;
+    }
+
+    .button.primary-button {
+        padding: 12px 30px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 50px 10px;
+    }
+    .bio-area h1 {
+        font-size: 2.2em;
+    }
+    .bio-area .tagline {
+        font-size: 1.2em;
+    }
+}
