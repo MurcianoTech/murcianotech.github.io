@@ -1,21 +1,19 @@
-/* src/styles/sidebar.css */
 
-/* Estilos del sidebar para desktop */
 .sidebar {
     width: 280px;
-    background-color: var(--sidebar-bg); /* Usa la variable de tema */
+    background-color: var(--sidebar-bg); 
     padding: 30px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-right: 1px solid var(--sidebar-border); /* Usa la variable de tema */
-    box-shadow: 2px 0 5px var(--shadow-color); /* Usa la variable de tema */
+    border-right: 1px solid var(--sidebar-border); 
+    box-shadow: 2px 0 5px var(--shadow-color); 
     position: sticky;
     top: 0;
     height: 100vh;
     overflow-y: auto;
     z-index: 100;
-    transition: transform 0.3s ease; /* Transición para responsive */
+    transition: transform 0.3s ease; 
 }
 
 .profile-area {
@@ -28,7 +26,7 @@
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid var(--primary-color); /* Usa la variable de tema */
+    border: 4px solid var(--primary-color); 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
 }
@@ -55,7 +53,7 @@
 .side-menu a {
     display: block;
     padding: 12px 15px;
-    color: var(--secondary-color); /* Usa la variable de tema */
+    color: var(--secondary-color); 
     font-weight: 500;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
     border-radius: 5px;
@@ -63,15 +61,15 @@
 }
 
 .side-menu a:hover:not(.active) {
-    background-color: var(--primary-color-light); /* Usa la variable de tema */
-    color: var(--primary-dark); /* Usa la variable de tema */
+    background-color: var(--primary-color-light); 
+    color: var(--primary-dark); 
     transform: translateX(5px);
 }
 
-/* Estilo para el enlace activo */
+
 .side-menu a.active {
-    background-color: var(--primary-color); /* Usa la variable de tema */
-    color: var(--card-bg); /* Usa la variable de tema */
+    background-color: var(--primary-color); 
+    color: var(--card-bg); 
     font-weight: 600;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
@@ -82,30 +80,30 @@
     flex-direction: column;
     gap: 15px;
     padding-top: 20px;
-    border-top: 1px solid var(--border-color); /* Usa la variable de tema */
+    border-top: 1px solid var(--border-color); 
     width: 100%;
     align-items: center;
 }
 
 .sidebar-social-links a {
-    color: var(--secondary-color); /* Usa la variable de tema */
+    color: var(--secondary-color); 
     font-size: 1.8em;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .sidebar-social-links a:hover {
     transform: scale(1.1);
-    color: var(--primary-color); /* Usa la variable de tema */
+    color: var(--primary-color); 
 }
 
-/* Estilos del botón de menú para móvil */
+
 .menu-toggle {
-    display: none; /* Oculto por defecto en desktop */
+    display: none; 
     position: fixed;
     bottom: 20px;
     right: 20px;
     z-index: 1000;
-    background-color: var(--primary-color); /* Usa la variable de tema */
+    background-color: var(--primary-color); 
     color: white;
     border: none;
     border-radius: 50%;
@@ -118,7 +116,7 @@
 }
 
 .menu-toggle:hover {
-    background-color: var(--primary-dark); /* Usa la variable de tema */
+    background-color: var(--primary-dark); 
     transform: translateY(-3px);
 }
 
@@ -127,35 +125,31 @@
 }
 
 .menu-toggle.is-active::before {
-    content: "\f00d"; /* Muestra la 'X' */
+    content: "\f00d"; 
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Contenedor del botón de tema */
+
 .theme-toggle-wrapper {
     width: 100%;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
     padding-top: 15px;
-    border-top: 1px solid var(--border-color); /* Usa la variable de tema */
+    border-top: 1px solid var(--border-color); 
 }
 
-/* Los estilos para el botón #theme-toggle en sí (colores, hover, etc.)
-   ya están definidos globalmente en main.css usando las variables de tema.
-   Solo necesitamos ajustes específicos para responsive si el diseño lo requiere. */
 
-/* Media Queries para responsividad */
 @media (max-width: 768px) {
     .sidebar {
         width: 100%;
         height: 100vh;
         position: fixed;
         top: 0;
-        left: -100%; /* Oculto por defecto */
+        left: -100%; 
         border-right: none;
         border-bottom: none;
         box-shadow: none;
@@ -163,18 +157,18 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        background-color: var(--bg-dark); /* Fondo para sidebar móvil (light mode) */
-        color: var(--card-bg); /* Texto para sidebar móvil (light mode) */
+        background-color: var(--bg-dark); 
+        color: var(--card-bg); 
         transition: left 0.4s ease-in-out;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
         z-index: 200;
     }
 
-    /* Estilos del sidebar cuando el tema oscuro está activo en móvil */
+    
     html[data-theme="dark"] .sidebar {
-        background-color: var(--bg-dark); /* Usa el bg-dark del tema oscuro */
-        color: var(--secondary-color); /* Usa el secondary-color del tema oscuro */
+        background-color: var(--bg-dark); 
+        color: var(--secondary-color); 
     }
 
     .sidebar.is-open {
@@ -187,7 +181,7 @@
     }
 
     .profile-photo {
-        border-color: var(--primary-color); /* Usa la variable de tema */
+        border-color: var(--primary-color); 
     }
 
     .side-menu {
@@ -207,25 +201,25 @@
 
     .side-menu a {
         font-size: 1.1em;
-        color: var(--card-bg); /* Color de enlaces en sidebar móvil (light mode) */
+        color: var(--card-bg); 
         padding: 15px 20px;
     }
 
-    /* Color de enlaces en sidebar móvil (dark mode) */
+    
     html[data-theme="dark"] .side-menu a {
-        color: var(--secondary-color); /* Usa el secondary-color del tema oscuro */
+        color: var(--secondary-color); 
     }
 
     .side-menu a:hover,
     .side-menu a.active {
-        background-color: var(--primary-dark); /* Usa la variable de tema */
-        color: white; /* Color de texto en hover/activo */
+        background-color: var(--primary-dark); 
+        color: white; 
         transform: none;
     }
 
     .sidebar-social-links {
         margin-top: 40px;
-        border-top: 1px solid var(--border-color); /* Usa la variable de tema */
+        border-top: 1px solid var(--border-color); 
         padding-top: 20px;
         flex-direction: row;
         justify-content: center;
@@ -233,25 +227,25 @@
     }
     .sidebar-social-links a {
         font-size: 1.7em;
-        color: var(--card-bg); /* Color de iconos en sidebar móvil (light mode) */
+        color: var(--card-bg); 
     }
-    /* Color de iconos en sidebar móvil (dark mode) */
+    
     html[data-theme="dark"] .sidebar-social-links a {
-        color: var(--secondary-color); /* Usa el secondary-color del tema oscuro */
+        color: var(--secondary-color); 
     }
 
     .sidebar-social-links a:hover {
-        color: var(--primary-color); /* Usa la variable de tema */
+        color: var(--primary-color); 
     }
 
     .menu-toggle {
-        display: flex; /* Mostrar botón de menú en móvil */
+        display: flex; 
         justify-content: center;
         align-items: center;
     }
 
-    /* Ajustes específicos para el botón de tema dentro del sidebar móvil */
+    
     .theme-toggle-wrapper {
-        border-top: 1px solid var(--border-color); /* Usa la variable de tema */
+        border-top: 1px solid var(--border-color); 
     }
 }

@@ -1,4 +1,4 @@
-/* src/styles/components/experience-section.css */
+
 
 .experience-section {
     padding: 60px;
@@ -18,87 +18,87 @@
     font-weight: 700;
 }
 
-/* Contenedor principal del timeline */
+
 .timeline {
     position: relative;
-    max-width: 1000px; /* Ancho máximo para el timeline */
+    max-width: 1000px; 
     margin: 0 auto;
-    padding: 20px 0; /* Espacio superior e inferior para la línea */
+    padding: 20px 0; 
 }
 
-/* Línea vertical central */
+
 .timeline::after {
     content: '';
     position: absolute;
     width: 4px;
-    background-color: var(--primary-color); /* Color de la línea */
+    background-color: var(--primary-color); 
     top: 0;
     bottom: 0;
-    left: 50%; /* Centra la línea */
-    margin-left: -2px; /* Ajuste para centrado perfecto */
-    z-index: 0; /* Asegura que la línea esté por debajo de los ítems */
+    left: 50%; 
+    margin-left: -2px; 
+    z-index: 0; 
 }
 
-/* Cada ítem del timeline */
+
 .timeline-item {
     padding: 10px 0;
     position: relative;
-    width: 50%; /* Cada ítem ocupa la mitad del ancho del timeline */
-    background-color: transparent; /* Fondo transparente */
-    z-index: 1; /* Asegura que los ítems estén por encima de la línea */
+    width: 50%; 
+    background-color: transparent; 
+    z-index: 1; 
 }
 
-/* Punto en la línea para cada ítem */
+
 .timeline-item::after {
     content: '';
     position: absolute;
     width: 20px;
     height: 20px;
-    background-color: var(--primary-color); /* Color del círculo */
-    border: 4px solid var(--card-bg); /* Borde para el círculo que se adapta al tema */
-    top: 30px; /* Posición vertical del círculo */
+    background-color: var(--primary-color); 
+    border: 4px solid var(--card-bg); 
+    top: 30px; 
     border-radius: 50%;
-    z-index: 1; /* Por encima de la línea */
-    box-shadow: 0 0 0 3px var(--bg-light); /* Un pequeño brillo o borde alrededor del círculo */
+    z-index: 1; 
+    box-shadow: 0 0 0 3px var(--bg-light); 
 }
 
-/* Estilos para ítems a la izquierda de la línea */
+
 .timeline-item.left {
-    left: 0; /* Posiciona a la izquierda */
-    padding-right: 60px; /* Espacio para el círculo y la línea */
+    left: 0; 
+    padding-right: 60px; 
 }
 
 .timeline-item.left::after {
-    right: -10px; /* Posiciona el círculo en el lado derecho del ítem (en la línea) */
+    right: -10px; 
 }
 
-/* Estilos para ítems a la derecha de la línea */
+
 .timeline-item.right {
-    left: 50%; /* Empieza desde la mitad */
-    padding-left: 60px; /* Espacio para el círculo y la línea */
+    left: 50%; 
+    padding-left: 60px; 
 }
 
 .timeline-item.right::after {
-    left: -10px; /* Posiciona el círculo en el lado izquierdo del ítem (en la línea) */
+    left: -10px; 
 }
 
-/* Contenido de cada tarjeta de experiencia */
+
 .timeline-content {
-    background-color: var(--bg-light); /* Fondo de la tarjeta */
+    background-color: var(--bg-light); 
     border: 1px solid var(--border-color);
-    padding: 25px; /* Reducimos un poco el padding */
+    padding: 25px; 
     border-radius: 10px;
     box-shadow: 0 4px 12px var(--shadow-color);
-    position: relative; /* Para el triángulo */
+    position: relative; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .timeline-content:hover {
-    transform: translateY(-8px); /* Efecto hover de levantamiento */
-    box-shadow: 0 8px 20px var(--shadow-color); /* Sombra más pronunciada al hover */
+    transform: translateY(-8px); 
+    box-shadow: 0 8px 20px var(--shadow-color); 
 }
 
-/* Triángulo que apunta a la línea (para ítems izquierdos) */
+
 .timeline-item.left .timeline-content::before {
     content: " ";
     height: 0;
@@ -106,13 +106,13 @@
     top: 22px;
     width: 0;
     z-index: 1;
-    right: -15px; /* Posiciona el triángulo a la derecha */
-    border: medium solid var(--bg-light); /* Color del triángulo */
+    right: -15px; 
+    border: medium solid var(--bg-light); 
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent var(--bg-light);
 }
 
-/* Triángulo que apunta a la línea (para ítems derechos) */
+
 .timeline-item.right .timeline-content::before {
     content: " ";
     height: 0;
@@ -120,21 +120,21 @@
     top: 22px;
     width: 0;
     z-index: 1;
-    left: -15px; /* Posiciona el triángulo a la izquierda */
+    left: -15px; 
     border: medium solid var(--bg-light);
     border-width: 10px 10px 10px 0;
     border-color: transparent var(--bg-light) transparent transparent;
 }
 
 .timeline-content h3 {
-    font-size: 1.7em; /* Un poco más pequeño para encajar mejor */
+    font-size: 1.7em; 
     margin-bottom: 8px;
     color: var(--secondary-color);
     font-weight: 600;
 }
 
 .timeline-content .company-period {
-    font-size: 1em; /* Ajuste para el timeline */
+    font-size: 1em; 
     color: var(--text-light);
     margin-bottom: 15px;
     font-weight: 500;
@@ -146,7 +146,7 @@
 }
 
 .experience-description p {
-    font-size: 1em; /* Ajuste para el timeline */
+    font-size: 1em; 
     color: var(--secondary-color);
     margin-bottom: 0.8em;
     text-align: justify;
@@ -180,7 +180,7 @@
     margin-left: 8px;
 }
 
-/* --- Media Queries para Responsividad del Timeline --- */
+
 @media (max-width: 1024px) {
     .experience-section {
         padding: 50px 30px;
@@ -197,32 +197,32 @@
         margin-bottom: 30px;
     }
 
-    /* En pantallas pequeñas, el timeline se convierte en una sola columna */
+    
     .timeline::after {
-        left: 31px; /* Mueve la línea central a la izquierda */
+        left: 31px; 
     }
 
     .timeline-item {
-        width: 100%; /* Ocupa todo el ancho */
-        padding-left: 70px; /* Más espacio a la izquierda para la línea y el círculo */
-        padding-right: 20px; /* Padding derecho */
+        width: 100%; 
+        padding-left: 70px; 
+        padding-right: 20px; 
     }
 
     .timeline-item.right {
-        left: 0%; /* Los ítems de la derecha también van a la izquierda */
+        left: 0%; 
     }
 
-    /* Posiciona los círculos y triángulos a la izquierda para todos los ítems */
+    
     .timeline-item.left::after,
     .timeline-item.right::after {
-        left: 20px; /* Posiciona el círculo a la izquierda */
+        left: 20px; 
     }
 
     .timeline-item.left .timeline-content::before,
     .timeline-item.right .timeline-content::before {
-        left: 55px; /* Ajusta la posición del triángulo para que apunte al círculo */
-        border-width: 10px 10px 10px 0; /* Cambia la dirección del triángulo */
-        border-color: transparent var(--bg-light) transparent transparent; /* Apunta hacia la derecha */
+        left: 55px; 
+        border-width: 10px 10px 10px 0; 
+        border-color: transparent var(--bg-light) transparent transparent; 
     }
 
     .timeline-content {
@@ -258,14 +258,14 @@
         margin-bottom: 25px;
     }
     .timeline::after {
-        left: 25px; /* Línea aún más a la izquierda */
+        left: 25px; 
     }
     .timeline-item {
-        padding-left: 60px; /* Más espacio a la izquierda */
+        padding-left: 60px; 
     }
     .timeline-item.left::after,
     .timeline-item.right::after {
-        left: 15px; /* Círculo más a la izquierda */
+        left: 15px; 
         width: 16px;
         height: 16px;
         border-width: 3px;
@@ -273,7 +273,7 @@
     }
     .timeline-item.left .timeline-content::before,
     .timeline-item.right .timeline-content::before {
-        left: 45px; /* Triángulo más a la izquierda */
+        left: 45px; 
         top: 18px;
     }
     .timeline-content h3 {
@@ -282,14 +282,14 @@
 }
 
 .experience-skills {
-    margin-top: 25px; /* Espacio superior para la sección de habilidades */
-    border-top: 1px solid var(--border-color); /* Separador visual */
+    margin-top: 25px; 
+    border-top: 1px solid var(--border-color); 
     padding-top: 20px;
 }
 
 .experience-skills h4 {
     font-size: 1em;
-    color: var(--text-light); /* Color del título "Habilidades usadas" */
+    color: var(--text-light); 
     margin-bottom: 15px;
     font-weight: 600;
     text-transform: uppercase;
@@ -298,36 +298,35 @@
 
 .skills-tags {
     display: flex;
-    flex-wrap: wrap; /* Permite que las etiquetas se envuelvan a la siguiente línea */
-    gap: 8px; /* Espacio entre las etiquetas */
+    flex-wrap: wrap; 
+    gap: 8px; 
 }
 
 .skill-tag {
     display: inline-flex;
     align-items: center;
-    gap: 7px; /* Espacio entre icono/imagen y texto de la habilidad */
+    gap: 7px; 
     padding: 7px 12px;
     border-radius: 5px;
-    font-size: 0.85em; /* Tamaño de fuente para las etiquetas */
+    font-size: 0.85em; 
     font-weight: 600;
-    color: white; /* Texto blanco en las etiquetas */
-    white-space: nowrap; /* Evita que el texto de la etiqueta se rompa */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.15); /* Sombra sutil */
+    color: white; 
+    white-space: nowrap; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15); 
 }
 
 .skill-tag i {
-    font-size: 1.1em; /* Tamaño del icono */
-    color: white; /* Color del icono */
+    font-size: 1.1em;
+    color: white;
 }
 
-.skill-tag-img { /* Estilo para las imágenes de habilidades (ej. Astro) */
+.skill-tag-img {
     width: 1.1em;
     height: 1.1em;
     object-fit: contain;
-    filter: brightness(0) invert(1); /* Para que los logos oscuros se vean blancos en fondo de color */
+    filter: brightness(0) invert(1);
 }
 
-/* Media Queries para ajuste de tamaño de fuente y espaciado en móviles */
 @media (max-width: 768px) {
     .experience-skills {
         margin-top: 20px;

@@ -16,7 +16,6 @@ export const socialLinks = [
     { name: 'LinkedIn', url: personalInfo.linkedinUrl, iconClass: 'fab fa-linkedin' },
     { name: 'GitHub', url: personalInfo.githubUrl, iconClass: 'fab fa-github' },
     { name: 'YouTube', url: personalInfo.youtubeUrl, iconClass: 'fab fa-youtube' },
-    /*{ name: 'Email', url: personalInfo.email, iconClass: 'fas fa-envelope' }*/
 ];
 
 export const navigationLinks = [

@@ -10,7 +10,7 @@ import '../styles/components/experience-section.css';
             {experienceData.map((item, index) => {
                 const usedSkillsDetails = item.skillsUsed
                     .map(skillName => skills.find(s => s.name === skillName))
-                    .filter(Boolean); // Este filtro ya debería eliminar 'undefined'
+                    .filter(Boolean);
 
                 return (
                     <div class={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`}>
@@ -26,10 +26,8 @@ import '../styles/components/experience-section.css';
                                     <h4>Habilidades usadas:</h4>
                                     <div class="skills-tags">
                                         {usedSkillsDetails.map(skill => (
-                                            // Añadimos una comprobación explícita para 'skill' aquí
-                                            // por si acaso, aunque filter(Boolean) debería haberlo manejado
                                             skill && (
-                                                <span class="skill-tag" style={`background-color: ${skill.color || '#666'};`}> {/* Fallback color */}
+                                                <span class="skill-tag" style={`background-color: ${skill.color || '#666'};`}> 
                                                     {skill.icon && <i class={skill.icon}></i>}
                                                     {skill.img && <img src={skill.img} alt={`${skill.name} Logo`} class="skill-tag-img" />}
                                                     {skill.name}
