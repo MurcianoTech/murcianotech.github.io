@@ -1,5 +1,3 @@
-import ScrollReveal from 'scrollreveal';
-
 document.addEventListener('DOMContentLoaded', () => {
     ScrollReveal({
         distance: '60px',
